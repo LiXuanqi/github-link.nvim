@@ -49,4 +49,8 @@ M.copy_link = function()
 	vim.fn.setreg("+", get_github_url_of_current_file())
 end
 
+M.open_link = function()
+	vim.ui.open(get_github_url_of_current_file())
+end
+
 return M
