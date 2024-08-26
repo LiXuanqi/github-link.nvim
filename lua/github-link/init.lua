@@ -53,4 +53,9 @@ M.open_link = function()
 	vim.ui.open(get_github_url_of_current_file())
 end
 
+M.setup = function()
+	vim.keymap.set("n", "<leader>gc", M.copy_link, { desc = "[G]ithub link: [C]opy" })
+	vim.keymap.set("n", "<leader>go", M.open_link, { desc = "[G]ithub link: [O]pen" })
+end
+
 return M
